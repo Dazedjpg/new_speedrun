@@ -40,7 +40,7 @@
       <!-- Run Item -->
       <div class="space-y-6">
         <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-          <img src="https://via.placeholder.com/64" alt="Game" class="w-16 h-16 rounded" />
+          <img src="{{asset('img/mario64.jpg') }}" alt="Mario64" class="w-16 h-16 rounded" />
           <div class="flex-1">
             <h3 class="font-semibold text-lg">Super Mario 64</h3>
             <p class="text-white text-sm">Any%</p>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-          <img src="https://via.placeholder.com/64" alt="Game" class="w-16 h-16 rounded" />
+          <img src="{{asset('img/donkeykong.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
           <div class="flex-1">
             <h3 class="font-semibold text-lg">Donkey Kong</h3>
             <p class="text-white text-sm">Glitchless</p>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-          <img src="https://via.placeholder.com/64" alt="Game" class="w-16 h-16 rounded" />
+          <img src="{{asset('img/minecraft.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
           <div class="flex-1">
             <h3 class="font-semibold text-lg">Minecraft</h3>
             <p class="text-white text-sm">Any% Glitchless</p>
@@ -86,8 +86,8 @@
       <!-- Challenges -->
       <div class="bg-gray-900 rounded-lg p-6">
         <h2 class="text-xl font-bold text-white mb-4">CHALLENGES</h2>
-        <p class="text-sm text-gray-400 mb-1">Live • <span class="bg-maroon text-white px-2 py-0.5 rounded text-xs">SRC Series</span></p>
-        <h3 class="text-white font-semibold mb-2">Deltarune Chapter 3 Egg% Speedrun Challenge</h3>
+        <p class="text-sm text-gray-400 mb-1">Live</p>
+        <h3 class="text-white font-semibold mb-2">Undertale Genocide any% Speedrun Challenge</h3>
         <p class="text-sm text-gray-400">Ends in <span class="text-white">4d 11h 45m</span></p>
         <p class="text-sm text-gray-400">Prize pool 🏆 <span class="text-white">$500.00</span></p>
       </div>
