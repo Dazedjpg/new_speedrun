@@ -39,7 +39,18 @@ class GameWebController extends Controller
             abort(404, 'Game not found');
         }
 
-        return view('games.show', compact('game'));
+        // Manual mapping warna per game
+        $styles = [
+            1001 => ['bg' => 'bg-yellow-700', 'nav' => 'bg-yellow-900'], // Pacman
+            1002 => ['bg' => 'bg-blue-800',   'nav' => 'bg-blue-900'],   // Tetris
+            1003 => ['bg' => 'bg-amber-900',  'nav' => 'bg-yellow-950'],    // Donkey Kong
+            1004 => ['bg' => 'bg-red-800',  'nav' => 'bg-red-900'],  // Mario 64
+        ];
+
+        $style = $styles[$game['game_id']] ?? ['bg' => 'bg-black', 'nav' => 'bg-maroon'];
+
+        return view('games.show', compact('game', 'style'));
     }
+
 
 }
