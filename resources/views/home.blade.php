@@ -64,14 +64,25 @@
         </div>
 
         <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-          <img src="{{asset('img/minecraft.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
+          <img src="{{asset('img/tetris.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
           <div class="flex-1">
             <h3 class="font-semibold text-lg">Tetris</h3>
-            <p class="text-white text-sm">Any% Glitchless</p>
-            <p class="text-sm text-gray-400">Bedrock Edition</p>
+            <p class="text-white text-sm">100%</p>
             <div class="flex items-center text-sm text-gray-400 mt-1">
-              👑 1st &nbsp;&nbsp; 0m 19s 800ms &nbsp;&nbsp; by <span class="text-white ml-1">Tentacool</span>
+              👑 1st &nbsp;&nbsp; 6m 30s &nbsp;&nbsp; by <span class="text-white ml-1">Tentacool</span>
               <span class="ml-auto">1 hour ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
+          <img src="{{asset('img/pacman.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
+          <div class="flex-1">
+            <h3 class="font-semibold text-lg">Pac-Man</h3>
+            <p class="text-white text-sm">Any%</p>
+            <div class="flex items-center text-sm text-gray-400 mt-1">
+              👑 1st &nbsp;&nbsp; 12m 44s 211ms &nbsp;&nbsp; by <span class="text-white ml-1">Hideo Kojima</span>
+              <span class="ml-auto">2 hour ago</span>
             </div>
           </div>
         </div>
