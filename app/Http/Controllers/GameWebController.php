@@ -25,31 +25,31 @@ class GameWebController extends Controller
     public function show($id)
     {
         $jsonPath = public_path('json/games.json');
+        $runsPath = public_path('json/runs.json');
 
-        if (!file_exists($jsonPath)) {
+        if (!file_exists($jsonPath) || !file_exists($runsPath)) {
             abort(500, 'Data file not found');
         }
 
-        $json = file_get_contents($jsonPath);
-        $data = json_decode($json, true);
+        $gamesData = json_decode(file_get_contents($jsonPath), true);
+        $runsData = json_decode(file_get_contents($runsPath), true);
 
-        $game = collect($data['games'])->firstWhere('game_id', (int)$id);
-
+        $game = collect($gamesData['games'])->firstWhere('game_id', (int)$id);
         if (!$game) {
             abort(404, 'Game not found');
         }
 
-        // Manual mapping warna per game
-        $styles = [
-            1001 => ['bg' => 'bg-yellow-700', 'nav' => 'bg-yellow-900'], // Pacman
-            1002 => ['bg' => 'bg-blue-800',   'nav' => 'bg-blue-900'],   // Tetris
-            1003 => ['bg' => 'bg-amber-900',  'nav' => 'bg-yellow-950'],    // Donkey Kong
-            1004 => ['bg' => 'bg-red-800',  'nav' => 'bg-red-900'],  // Mario 64
-        ];
+        // Filter runs for this game
+        $runs = collect($runsData['runs'])->where('game_id', (int)$id)->values();
 
-        $style = $styles[$game['game_id']] ?? ['bg' => 'bg-black', 'nav' => 'bg-maroon'];
+        // Styling per game
+        $style = match($game['game_title']) {
+            'Donkey Kong' => ['bg' => 'bg-yellow-800', 'nav' => 'bg-yellow-900'],
+            'Pacman' => ['bg' => 'bg-yellow-700', 'nav' => 'bg-yellow-800'],
+            default => ['bg' => 'bg-gray-900', 'nav' => 'bg-gray-800'],
+        };
 
-        return view('games.show', compact('game', 'style'));
+        return view('games.show', compact('game', 'style', 'runs'));
     }
 
 
