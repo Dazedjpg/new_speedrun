@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Speedruner | Home</title>
+  <title>Arena Speedrun | Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .bg-maroon { background-color: #800000; }
@@ -15,7 +15,7 @@
 <!-- Navbar -->
 <nav class="bg-maroon border-b border-gray-700 px-8 py-4 flex items-center justify-between">
   <div class="flex items-center gap-6">
-    <span class="text-white font-bold text-xl">Speedrunner</span>
+    <span class="text-white font-bold text-xl">Arena Speedrun</span>
     <a href="/" class="text-white hover:underline">Home</a>
     <a href="/games" class="text-white hover:underline">Games</a>
   </div>
@@ -52,6 +52,8 @@
     @endauth
   </div>
 </nav>
+
+  <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
 
   <!-- LATEST RUNS - KIRI -->
   <div class="md:col-span-2 bg-gray-900 rounded-lg p-6">

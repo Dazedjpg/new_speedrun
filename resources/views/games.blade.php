@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Speedrun | Games</title>
+  <title>Arena Speedrun | Games</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .bg-maroon { background-color: #800000; }
