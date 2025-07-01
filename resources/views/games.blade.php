@@ -1,52 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Game Detail | Speedrunner</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .bg-maroon { background-color: #800000; }
-    .text-maroon { color: #800000; }
-  </style>
-</head>
-<body class="bg-black text-white font-sans min-h-screen">
+@extends('layouts.app')
 
-  <!-- Navbar -->
-  <nav class="bg-maroon border-b border-gray-700 px-8 py-4 flex items-center justify-between">
-    <div class="flex items-center gap-6">
-      <a href="/" class="text-white font-bold text-xl">Speedrunner</a>
-      <a href="/" class="text-white hover:underline">Home</a>
-      <a href="/games" class="text-white hover:underline">Games</a>
-    </div>
-    <div class="flex items-center gap-4">
-      <input
-        type="text"
-        placeholder="Search..."
-        class="px-3 py-1 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-maroon"
-      />
-      <a href="/register" class="text-white hover:underline">Sign Up</a>
-      <a href="/login" class="bg-maroon text-white px-4 py-1 rounded hover:bg-red-900">Sign In</a>
-    </div>
-  </nav>
+@section('content')
+<div class="bg-black min-h-screen text-white py-10 px-4 md:px-12">
+  <h1 class="text-3xl font-bold text-white mb-6">All Games</h1>
 
-  <!-- Game Detail -->
-  <div class="container mx-auto px-4 py-10">
-    <div class="max-w-3xl mx-auto bg-gray-900 rounded-lg p-8">
-      <div class="flex items-center gap-6">
-        <img src="{{ asset($game['image_url']) }}" alt="{{ $game['title'] }}" class="w-32 h-32 rounded" />
-        <div>
-          <h1 class="text-3xl font-bold">{{ $game['title'] }}</h1>
-          <p class="text-gray-400">{{ $game['category'] }}</p>
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-6">
+    @foreach ($games as $game)
+      <a href="{{ route('games.show', $game->id) }}" class="bg-gray-900 rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-150">
+        <img src="{{ $game->cover_url }}" alt="{{ $game->name }}" class="w-full h-32 object-cover">
+        <div class="p-3">
+          <h2 class="text-sm font-semibold text-white leading-tight truncate">{{ $game->name }}</h2>
+          <p class="text-xs text-gray-400 mt-1">{{ $game->release_year }}</p>
         </div>
-      </div>
-
-      <div class="mt-6 text-gray-300">
-        <p><strong>Runner:</strong> <span class="text-white">{{ $game['runner'] }}</span></p>
-        <p><strong>Rank:</strong> {{ $game['rank'] }}</p>
-        <p><strong>Time:</strong> {{ $game['time'] }}</p>
-      </div>
-    </div>
+      </a>
+    @endforeach
   </div>
 
-</body>
-</html>
+  <div class="mt-8">
+    {{ $games->links() }}
+  </div>
+</div>
+@endsection
