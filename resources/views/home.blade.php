@@ -40,7 +40,7 @@
       <!-- Run Item -->
       <div class="space-y-6">
         <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-          <img src="{{asset('img/mario64.jpg') }}" alt="Mario64" class="w-16 h-16 rounded" />
+          <img src="{{asset('img/mario.jpg') }}" alt="Mario64" class="w-16 h-16 rounded" />
           <div class="flex-1">
             <h3 class="font-semibold text-lg">Super Mario 64</h3>
             <p class="text-white text-sm">Any%</p>
