@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameWebController;
 use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/signup', [AuthController::class, 'showSignupForm'])->name('signup.form');
 Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
@@ -10,7 +11,16 @@ Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
 Route::get('/signin', [AuthController::class, 'showSigninForm'])->name('signin.form');
 Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/profile', function () {
+    return view('profile');
+})->middleware('auth')->name('profile');
+
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/'); // arahkan kembali ke homepage 
+    })->name('logout');
+    
+
 
 
 Route::get('/', function () {
