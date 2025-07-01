@@ -26,8 +26,9 @@
       placeholder="Search..."
       class="px-3 py-1 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-maroon"
     />
-    <a href="/register" class="text-white hover:underline">Sign Up</a>
-    <a href="/login" class="bg-maroon text-white px-4 py-1 rounded hover:bg-red-900">Sign In</a>
+    <a href="{{ route('signup.form') }}" class="text-white hover:underline">Sign Up</a>
+<a href="{{ route('signin.form') }}" class="bg-maroon text-white px-4 py-1 rounded hover:bg-red-900">Sign In</a>
+
   </div>
 </nav>
 
