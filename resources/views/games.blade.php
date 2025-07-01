@@ -1,23 +1,28 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Games</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white min-h-screen">
+  <div class="p-6">
+    <h1 class="text-3xl font-bold mb-4">Games List</h1>
 
-@section('content')
-<div class="bg-black min-h-screen text-white py-10 px-4 md:px-12">
-  <h1 class="text-3xl font-bold text-white mb-6">All Games</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      @foreach($games as $game)
+        <div class="bg-gray-900 p-4 rounded">
+          <h2 class="text-xl font-semibold">{{ $game['game_title'] }}</h2>
+          <p class="text-sm text-gray-400">{{ $game['description'] }}</p>
+          <img 
+            src="{{ asset('img/' . $game['cover_image']) }}" 
+            alt="{{ $game['game_title'] }}" 
+            class="w-full h-40 sm:h-48 md:h-56 object-cover rounded mt-4"
+          />
 
-  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-6">
-    @foreach ($games as $game)
-      <a href="{{ route('games.show', $game->id) }}" class="bg-gray-900 rounded-md overflow-hidden hover:scale-[1.03] transition-transform duration-150">
-        <img src="{{ $game->cover_url }}" alt="{{ $game->name }}" class="w-full h-32 object-cover">
-        <div class="p-3">
-          <h2 class="text-sm font-semibold text-white leading-tight truncate">{{ $game->name }}</h2>
-          <p class="text-xs text-gray-400 mt-1">{{ $game->release_year }}</p>
         </div>
-      </a>
-    @endforeach
+      @endforeach
+    </div>
   </div>
-
-  <div class="mt-8">
-    {{ $games->links() }}
-  </div>
-</div>
-@endsection
+</body>
+</html>

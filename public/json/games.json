@@ -2,25 +2,25 @@
   "games": [
     {
       "game_id": 1001,
-      "title": "Pacman",
+      "game_title": "Pacman",
       "description": "Pac-Man is an action maze chase video game; the player controls the eponymous character through an enclosed maze.",
       "cover_image": "pacman.jpg"
     },
     {
       "game_id": 1002,
-      "title": "Tetris",
+      "game_title": "Tetris",
       "description": "Tetris begins with an empty screen, and requires the player to fit falling blocks together like a puzzle.",
       "cover_image": "tetris.jpg"
     },
     {
       "game_id": 1003,
-      "title": "Donkey Kong",
+      "game_title": "Donkey Kong",
       "description": "Donkey Kong is an action game released in 1981 by Nintendo.",
       "cover_image": "donkeykong.jpg"
     },
     {
       "game_id": 1004,
-      "title": "Mario 64",
+      "game_title": "Mario 64",
       "description": "Super Mario 64 is a 3D platformer in which the player controls the titular character Mario through various courses.",
       "cover_image": "mario.jpg"
     }
