@@ -46,7 +46,7 @@
       <h3 class="font-semibold text-lg">Super Mario 64</h3>
       <p class="text-white text-sm">Any%</p>
       <div class="flex items-center text-sm text-gray-400 mt-1">
-        👑 1st &nbsp;&nbsp; 11m 52s 100ms &nbsp;&nbsp; by <span class="text-white ml-1">KasKus</span>
+        👑 1st &nbsp;&nbsp; 11m 52s 100ms &nbsp;&nbsp; by <span class="text-white ml-1">Midket</span>
         <span class="ml-auto">53 Minute ago</span>
       </div>
     </div>
@@ -60,7 +60,7 @@
       <h3 class="font-semibold text-lg">Donkey Kong</h3>
       <p class="text-white text-sm">glitchless</p>
       <div class="flex items-center text-sm text-gray-400 mt-1">
-        👑 1st &nbsp;&nbsp; 5m 10s &nbsp;&nbsp; by <span class="text-white ml-1">Peynkiller00</span>
+        👑 1st &nbsp;&nbsp; 5m 10s &nbsp;&nbsp; by <span class="text-white ml-1">paynkiller01</span>
         <span class="ml-auto">1 hour ago</span>
       </div>
     </div>
@@ -74,7 +74,7 @@
       <h3 class="font-semibold text-lg">Tetris</h3>
       <p class="text-white text-sm">Any%</p>
       <div class="flex items-center text-sm text-gray-400 mt-1">
-        👑 1st &nbsp;&nbsp; 18m 12s 21ms &nbsp;&nbsp; by <span class="text-white ml-1">Jojo</span>
+        👑 1st &nbsp;&nbsp; 18m 12s 21ms &nbsp;&nbsp; by <span class="text-white ml-1">Tentacool</span>
         <span class="ml-auto">1.5 hour ago</span>
       </div>
     </div>
