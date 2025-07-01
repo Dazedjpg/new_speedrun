@@ -31,100 +31,111 @@
   </div>
 </nav>
 
-  <div class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-    
-    <!-- Latest Runs -->
-    <div class="lg:col-span-2 bg-gray-900 rounded-lg p-6">
-      <h2 class="text-xl font-bold text-white mb-4">LATEST RUNS</h2>
+  <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+  <!-- LATEST RUNS - KIRI -->
+  <div class="md:col-span-2 bg-gray-900 rounded-lg p-6">
+    <h2 class="text-xl font-bold text-white mb-4">LATEST RUNS</h2>
       
       <!-- Run Item -->
-      <div class="space-y-6">
-        <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-          <img src="{{asset('img/mario.jpg') }}" alt="Mario64" class="w-16 h-16 rounded" />
-          <div class="flex-1">
-            <h3 class="font-semibold text-lg">Super Mario 64</h3>
-            <p class="text-white text-sm">Any%</p>
-            <div class="flex items-center text-sm text-gray-400 mt-1">
-              🏆 1st &nbsp;&nbsp; 8m 19s 485ms &nbsp;&nbsp; by <span class="text-white ml-1">Midket</span>
-              <span class="ml-auto">59 minutes ago</span>
-            </div>
-          </div>
-        </div>
+       <div class="space-y-6">
+      <a href="{{ url('/games/1004') }}" class="block hover:bg-gray-800 transition rounded-lg px-1 py-2">
+  <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
+    <img src="{{ asset('img/mario.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
+    <div class="flex-1">
+      <h3 class="font-semibold text-lg">Super Mario 64</h3>
+      <p class="text-white text-sm">Any%</p>
+      <div class="flex items-center text-sm text-gray-400 mt-1">
+        👑 1st &nbsp;&nbsp; 11m 52s 100ms &nbsp;&nbsp; by <span class="text-white ml-1">KasKus</span>
+        <span class="ml-auto">53 Minute ago</span>
+      </div>
+    </div>
+  </div>
+</a>
 
-        <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-          <img src="{{asset('img/donkeykong.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
-          <div class="flex-1">
-            <h3 class="font-semibold text-lg">Donkey Kong</h3>
-            <p class="text-white text-sm">Glitchless</p>
-            <div class="flex items-center text-sm text-gray-400 mt-1">
-              👑 1st &nbsp;&nbsp; 0m 19s 800ms &nbsp;&nbsp; by <span class="text-white ml-1">paynkiller01</span>
-              <span class="ml-auto">1 hour ago</span>
-            </div>
-          </div>
-        </div>
+        <a href="{{ url('/games/1003') }}" class="block hover:bg-gray-800 transition rounded-lg px-1 py-2">
+  <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
+    <img src="{{ asset('img/donkeykong.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
+    <div class="flex-1">
+      <h3 class="font-semibold text-lg">Donkey Kong</h3>
+      <p class="text-white text-sm">glitchless</p>
+      <div class="flex items-center text-sm text-gray-400 mt-1">
+        👑 1st &nbsp;&nbsp; 5m 10s &nbsp;&nbsp; by <span class="text-white ml-1">Peynkiller00</span>
+        <span class="ml-auto">1 hour ago</span>
+      </div>
+    </div>
+  </div>
+</a>
 
-        <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-          <img src="{{asset('img/tetris.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
-          <div class="flex-1">
-            <h3 class="font-semibold text-lg">Tetris</h3>
-            <p class="text-white text-sm">100%</p>
-            <div class="flex items-center text-sm text-gray-400 mt-1">
-              👑 1st &nbsp;&nbsp; 6m 30s &nbsp;&nbsp; by <span class="text-white ml-1">Tentacool</span>
-              <span class="ml-auto">1 hour ago</span>
-            </div>
-          </div>
-        </div>
+        <a href="{{ url('/games/1002') }}" class="block hover:bg-gray-800 transition rounded-lg px-1 py-2">
+  <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
+    <img src="{{ asset('img/tetris.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
+    <div class="flex-1">
+      <h3 class="font-semibold text-lg">Tetris</h3>
+      <p class="text-white text-sm">Any%</p>
+      <div class="flex items-center text-sm text-gray-400 mt-1">
+        👑 1st &nbsp;&nbsp; 18m 12s 21ms &nbsp;&nbsp; by <span class="text-white ml-1">Jojo</span>
+        <span class="ml-auto">1.5 hour ago</span>
+      </div>
+    </div>
+  </div>
+</a>
 
-        <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-          <img src="{{asset('img/pacman.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
-          <div class="flex-1">
-            <h3 class="font-semibold text-lg">Pac-Man</h3>
-            <p class="text-white text-sm">Any%</p>
-            <div class="flex items-center text-sm text-gray-400 mt-1">
-              👑 1st &nbsp;&nbsp; 12m 44s 211ms &nbsp;&nbsp; by <span class="text-white ml-1">Hideo Kojima</span>
-              <span class="ml-auto">2 hour ago</span>
-            </div>
-          </div>
-        </div>
+        <a href="{{ url('/games/1001') }}" class="block hover:bg-gray-800 transition rounded-lg px-1 py-2">
+  <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
+    <img src="{{ asset('img/pacman.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
+    <div class="flex-1">
+      <h3 class="font-semibold text-lg">Pac-Man</h3>
+      <p class="text-white text-sm">Any%</p>
+      <div class="flex items-center text-sm text-gray-400 mt-1">
+        👑 1st &nbsp;&nbsp; 12m 44s 211ms &nbsp;&nbsp; by <span class="text-white ml-1">Hideo Kojima</span>
+        <span class="ml-auto">2 hour ago</span>
+      </div>
+    </div>
+  </div>
+</a>
 
         <!-- Tambahkan data run lainnya seperti pola di atas -->
       </div>
     </div>
 
     <!-- Sidebar -->
-    <div class="space-y-6">
-      
-      <!-- Challenges -->
-      <div class="bg-gray-900 rounded-lg p-6">
-        <h2 class="text-xl font-bold text-white mb-4">CHALLENGES</h2>
-        <p class="text-sm text-gray-400 mb-1">Live</p>
-        <h3 class="text-white font-semibold mb-2">Undertale Genocide any% Speedrun Challenge</h3>
-        <p class="text-sm text-gray-400">Ends in <span class="text-white">4d 11h 45m</span></p>
-        <p class="text-sm text-gray-400">Prize pool 🏆 <span class="text-white">$500.00</span></p>
-      </div>
+    <div class="flex flex-col space-y-6">
+    
+    <!-- CHALLENGES -->
+    <div class="bg-gray-900 rounded-lg p-6">
+      <h2 class="text-xl font-bold text-white mb-4">CHALLENGES</h2>
+      <p class="text-sm text-gray-400 mb-1">Live</p>
+      <h3 class="text-white font-semibold mb-2">Undertale Genocide any% Speedrun Challenge</h3>
+      <p class="text-sm text-gray-400">Ends in <span class="text-white">4d 11h 45m</span></p>
+      <p class="text-sm text-gray-400">Prize pool 🏆 <span class="text-white">$500.00</span></p>
+    </div>
 
-      <!-- Community News -->
-      <div class="bg-gray-900 rounded-lg p-6">
-        <h2 class="text-xl font-bold text-white mb-4">COMMUNITY NEWS</h2>
-        <div class="space-y-4">
-          <div>
-            <p class="text-sm text-white">SITE NEWS • 2 days ago</p>
-            <h4 class="font-semibold">SRC Series Deltarune Chapter 3 Egg%...</h4>
-            <p class="text-xs text-gray-400">by <span class="text-white">Meta</span> • 6 views</p>
-          </div>
-          <div>
-            <p class="text-sm text-white">13 days ago</p>
-            <h4 class="font-semibold">The 2nd Edition Twisted Metal Minute...</h4>
-            <p class="text-xs text-gray-400">by <span class="text-white">AudiblySmiles</span> • 0 views</p>
-          </div>
-          <div>
-            <p class="text-sm text-white">26 days ago</p>
-            <h4 class="font-semibold">Jetrunner Demo $600 Speedrun Bounty...</h4>
-            <p class="text-xs text-gray-400">by <span class="text-white">VexGamingTV</span> • 3 views</p>
-          </div>
+    <!-- COMMUNITY NEWS -->
+    <div class="bg-gray-900 rounded-lg p-6">
+      <h2 class="text-xl font-bold text-white mb-4">COMMUNITY NEWS</h2>
+      <div class="space-y-4">
+        <div>
+          <p class="text-sm text-white">SITE NEWS • 2 days ago</p>
+          <h4 class="font-semibold">SRC Series Deltarune Chapter 3 Egg%...</h4>
+          <p class="text-xs text-gray-400">by <span class="text-white">Meta</span> • 6 views</p>
+        </div>
+        <div>
+          <p class="text-sm text-white">13 days ago</p>
+          <h4 class="font-semibold">The 2nd Edition Twisted Metal Minute...</h4>
+          <p class="text-xs text-gray-400">by <span class="text-white">AudiblySmiles</span> • 0 views</p>
+        </div>
+        <div>
+          <p class="text-sm text-white">26 days ago</p>
+          <h4 class="font-semibold">Jetrunner Demo $600 Speedrun Bounty...</h4>
+          <p class="text-xs text-gray-400">by <span class="text-white">VexGamingTV</span> • 3 views</p>
         </div>
       </div>
     </div>
+
+  </div> <!-- end sidebar -->
+
+</div> <!-- end grid -->
 
   </div>
 
