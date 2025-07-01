@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Speedrun Dashboard</title>
+  <title>Speedruner | Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .bg-maroon { background-color: #800000; }
@@ -13,11 +13,11 @@
 <body class="bg-black text-white font-sans min-h-screen">
 
 <!-- Navbar -->
-<nav class="bg-black border-b border-gray-700 px-8 py-4 flex items-center justify-between">
+<nav class="bg-maroon border-b border-gray-700 px-8 py-4 flex items-center justify-between">
   <div class="flex items-center gap-6">
-    <span class="text-white font-bold text-xl">Arena Speedrun</span>
-    <a href="/" class="text-maroon hover:underline">Home</a>
-    <a href="/games" class="text-maroon hover:underline">Games</a>
+    <span class="text-white font-bold text-xl">Speedrunner</span>
+    <a href="/" class="text-white hover:underline">Home</a>
+    <a href="/games" class="text-white hover:underline">Games</a>
   </div>
 
   <div class="flex items-center gap-4">
@@ -35,7 +35,7 @@
     
     <!-- Latest Runs -->
     <div class="lg:col-span-2 bg-gray-900 rounded-lg p-6">
-      <h2 class="text-xl font-bold text-maroon mb-4">LATEST RUNS</h2>
+      <h2 class="text-xl font-bold text-white mb-4">LATEST RUNS</h2>
       
       <!-- Run Item -->
       <div class="space-y-6">
@@ -43,7 +43,7 @@
           <img src="https://via.placeholder.com/64" alt="Game" class="w-16 h-16 rounded" />
           <div class="flex-1">
             <h3 class="font-semibold text-lg">Super Mario 64</h3>
-            <p class="text-maroon text-sm">Any%</p>
+            <p class="text-white text-sm">Any%</p>
             <div class="flex items-center text-sm text-gray-400 mt-1">
               🏆 1st &nbsp;&nbsp; 8m 19s 485ms &nbsp;&nbsp; by <span class="text-white ml-1">Midket</span>
               <span class="ml-auto">59 minutes ago</span>
@@ -55,7 +55,7 @@
           <img src="https://via.placeholder.com/64" alt="Game" class="w-16 h-16 rounded" />
           <div class="flex-1">
             <h3 class="font-semibold text-lg">Donkey Kong</h3>
-            <p class="text-maroon text-sm">Glitchless</p>
+            <p class="text-white text-sm">Glitchless</p>
             <div class="flex items-center text-sm text-gray-400 mt-1">
               👑 1st &nbsp;&nbsp; 0m 19s 800ms &nbsp;&nbsp; by <span class="text-white ml-1">paynkiller01</span>
               <span class="ml-auto">1 hour ago</span>
@@ -67,7 +67,7 @@
           <img src="https://via.placeholder.com/64" alt="Game" class="w-16 h-16 rounded" />
           <div class="flex-1">
             <h3 class="font-semibold text-lg">Minecraft</h3>
-            <p class="text-maroon text-sm">Any% Glitchless</p>
+            <p class="text-white text-sm">Any% Glitchless</p>
             <p class="text-sm text-gray-400">Bedrock Edition</p>
             <div class="flex items-center text-sm text-gray-400 mt-1">
               👑 1st &nbsp;&nbsp; 0m 19s 800ms &nbsp;&nbsp; by <span class="text-white ml-1">Tentacool</span>
@@ -85,7 +85,7 @@
       
       <!-- Challenges -->
       <div class="bg-gray-900 rounded-lg p-6">
-        <h2 class="text-xl font-bold text-maroon mb-4">CHALLENGES</h2>
+        <h2 class="text-xl font-bold text-white mb-4">CHALLENGES</h2>
         <p class="text-sm text-gray-400 mb-1">Live • <span class="bg-maroon text-white px-2 py-0.5 rounded text-xs">SRC Series</span></p>
         <h3 class="text-white font-semibold mb-2">Deltarune Chapter 3 Egg% Speedrun Challenge</h3>
         <p class="text-sm text-gray-400">Ends in <span class="text-white">4d 11h 45m</span></p>
@@ -94,20 +94,20 @@
 
       <!-- Community News -->
       <div class="bg-gray-900 rounded-lg p-6">
-        <h2 class="text-xl font-bold text-maroon mb-4">COMMUNITY NEWS</h2>
+        <h2 class="text-xl font-bold text-white mb-4">COMMUNITY NEWS</h2>
         <div class="space-y-4">
           <div>
-            <p class="text-sm text-maroon">SITE NEWS • 2 days ago</p>
+            <p class="text-sm text-white">SITE NEWS • 2 days ago</p>
             <h4 class="font-semibold">SRC Series Deltarune Chapter 3 Egg%...</h4>
             <p class="text-xs text-gray-400">by <span class="text-white">Meta</span> • 6 views</p>
           </div>
           <div>
-            <p class="text-sm text-maroon">13 days ago</p>
+            <p class="text-sm text-white">13 days ago</p>
             <h4 class="font-semibold">The 2nd Edition Twisted Metal Minute...</h4>
             <p class="text-xs text-gray-400">by <span class="text-white">AudiblySmiles</span> • 0 views</p>
           </div>
           <div>
-            <p class="text-sm text-maroon">26 days ago</p>
+            <p class="text-sm text-white">26 days ago</p>
             <h4 class="font-semibold">Jetrunner Demo $600 Speedrun Bounty...</h4>
             <p class="text-xs text-gray-400">by <span class="text-white">VexGamingTV</span> • 3 views</p>
           </div>
