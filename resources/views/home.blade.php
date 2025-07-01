@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Speedrunner | Home</title>
+  <title>Speedruner | Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .bg-maroon { background-color: #800000; }
@@ -12,51 +12,71 @@
 </head>
 <body class="bg-black text-white font-sans min-h-screen">
 
-  <!-- Navbar -->
-  <nav class="bg-maroon border-b border-gray-700 px-8 py-4 flex items-center justify-between">
-    <div class="flex items-center gap-6">
-      <span class="text-white font-bold text-xl">Speedrunner</span>
-      <a href="/" class="text-white hover:underline">Home</a>
-      <a href="/games" class="text-white hover:underline">Games</a>
-    </div>
-    <div class="flex items-center gap-4">
-      <input
-        type="text"
-        placeholder="Search..."
-        class="px-3 py-1 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-maroon"
-      />
-      <a href="/register" class="text-white hover:underline">Sign Up</a>
-      <a href="/login" class="bg-maroon text-white px-4 py-1 rounded hover:bg-red-900">Sign In</a>
-    </div>
-  </nav>
+<!-- Navbar -->
+<nav class="bg-maroon border-b border-gray-700 px-8 py-4 flex items-center justify-between">
+  <div class="flex items-center gap-6">
+    <span class="text-white font-bold text-xl">Speedrunner</span>
+    <a href="/" class="text-white hover:underline">Home</a>
+    <a href="/games" class="text-white hover:underline">Games</a>
+  </div>
 
-  <!-- Main Content -->
+  <div class="flex items-center gap-4">
+    <input
+      type="text"
+      placeholder="Search..."
+      class="px-3 py-1 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-maroon"
+    />
+    <a href="/register" class="text-white hover:underline">Sign Up</a>
+    <a href="/login" class="bg-maroon text-white px-4 py-1 rounded hover:bg-red-900">Sign In</a>
+  </div>
+</nav>
+
   <div class="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
     
     <!-- Latest Runs -->
     <div class="lg:col-span-2 bg-gray-900 rounded-lg p-6">
       <h2 class="text-xl font-bold text-white mb-4">LATEST RUNS</h2>
-
-      <!-- Loop Games -->
+      
+      <!-- Run Item -->
       <div class="space-y-6">
-        @foreach ($games as $game)
-          <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
-            <img src="{{ asset($game['image_url']) }}" alt="{{ $game['title'] }}" class="w-16 h-16 rounded" />
-            <div class="flex-1">
-              <h3 class="font-semibold text-lg">
-                <a href="{{ route('games.show', ['slug' => $game['slug']]) }}" class="text-white hover:underline">
-                  {{ $game['title'] }}
-                </a>
-              </h3>
-              <p class="text-white text-sm">{{ $game['category'] }}</p>
-              <div class="flex items-center text-sm text-gray-400 mt-1">
-                👑 {{ $game['rank'] }} &nbsp;&nbsp; {{ $game['time'] }} &nbsp;&nbsp;
-                by <span class="text-white ml-1">{{ $game['runner'] }}</span>
-                <span class="ml-auto">1 hour ago</span>
-              </div>
+        <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
+          <img src="{{asset('img/mario64.jpg') }}" alt="Mario64" class="w-16 h-16 rounded" />
+          <div class="flex-1">
+            <h3 class="font-semibold text-lg">Super Mario 64</h3>
+            <p class="text-white text-sm">Any%</p>
+            <div class="flex items-center text-sm text-gray-400 mt-1">
+              🏆 1st &nbsp;&nbsp; 8m 19s 485ms &nbsp;&nbsp; by <span class="text-white ml-1">Midket</span>
+              <span class="ml-auto">59 minutes ago</span>
             </div>
           </div>
-        @endforeach
+        </div>
+
+        <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
+          <img src="{{asset('img/donkeykong.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
+          <div class="flex-1">
+            <h3 class="font-semibold text-lg">Donkey Kong</h3>
+            <p class="text-white text-sm">Glitchless</p>
+            <div class="flex items-center text-sm text-gray-400 mt-1">
+              👑 1st &nbsp;&nbsp; 0m 19s 800ms &nbsp;&nbsp; by <span class="text-white ml-1">paynkiller01</span>
+              <span class="ml-auto">1 hour ago</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start border-b border-gray-700 pb-4">
+          <img src="{{asset('img/minecraft.jpg') }}" alt="Game" class="w-16 h-16 rounded" />
+          <div class="flex-1">
+            <h3 class="font-semibold text-lg">Tetris</h3>
+            <p class="text-white text-sm">Any% Glitchless</p>
+            <p class="text-sm text-gray-400">Bedrock Edition</p>
+            <div class="flex items-center text-sm text-gray-400 mt-1">
+              👑 1st &nbsp;&nbsp; 0m 19s 800ms &nbsp;&nbsp; by <span class="text-white ml-1">Tentacool</span>
+              <span class="ml-auto">1 hour ago</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tambahkan data run lainnya seperti pola di atas -->
       </div>
     </div>
 
