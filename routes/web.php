@@ -1,13 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\GameWebController;
-use App\Http\Controllers\Api\GameApiController;
+use App\Http\Controllers\RunController;
+use App\Http\Controllers\GameController;
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/games', [GameWebController::class, 'index'])->name('games.index');
-Route::get('/games/{id}', [GameWebController::class, 'show'])->name('games.show');
+// Halaman Utama (Home)
+Route::get('/', [RunController::class, 'index'])->name('home');
 
-Route::get('/games', [GameApiController::class, 'index']);
+// Halaman Detail Game berdasarkan slug
+Route::get('/games/{slug}', [GameController::class, 'show'])->name('games.show');
