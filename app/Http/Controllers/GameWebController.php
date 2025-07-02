@@ -1,14 +1,27 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Game;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class GameWebController extends Controller
 {
+    protected function updateGamesJsonFromDatabase()
+        {
+        $games = Game::all();
+
+        $data = [
+            'games' => $games->toArray()
+        ];
+
+        Storage::disk('public')->put('json/games.json', json_encode($data, JSON_PRETTY_PRINT));
+        }
+
+
     public function index()
     {
-        $jsonPath = public_path('json/games.json');
+        $jsonPath = public_path('app/public/json/games.json');
 
         if (!file_exists($jsonPath)) {
             abort(500, 'Data file not found');
@@ -24,8 +37,8 @@ class GameWebController extends Controller
 
     public function show($id)
     {
-        $jsonPath = public_path('json/games.json');
-        $runsPath = public_path('json/runs.json');
+        $jsonPath = public_path('app/public/json/games.json');
+        $runsPath = public_path('app/public/json/runs.json');
 
         if (!file_exists($jsonPath) || !file_exists($runsPath)) {
             abort(500, 'Data file not found');
@@ -39,10 +52,10 @@ class GameWebController extends Controller
             abort(404, 'Game not found');
         }
         // Add after fetching $game
-        $categories = $data['categories'] ?? [];
-        $versions = collect($data['game_versions'] ?? [])
-                    ->where('game_id', $game['game_id'])
-                    ->values();
+        // $categories = $data['categories'] ?? [];
+        // $versions = collect($data['game_versions'] ?? [])
+        //             ->where('game_id', $game['game_id'])
+        //             ->values();
 
 
         // Filter runs untuk game ini
@@ -60,9 +73,24 @@ class GameWebController extends Controller
         default => ['bg' => 'bg-gray-900', 'nav' => 'bg-gray-800']        
         };
 
+        
         return view('games.show', compact('game', 'style', 'categories', 'runs', 'versions'));
     }
 
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'game_title' => 'required|string',
+            'description' => 'nullable|string',
+            'cover_image' => 'nullable|string',
+        ]);
+
+        Game::create($validated);
+
+        $this->updateGamesJsonFromDatabase();
+
+        return redirect()->route('games.index')->with('success', 'Game created and JSON updated!');
+    }
 
 
 }

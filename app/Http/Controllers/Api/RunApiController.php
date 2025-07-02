@@ -11,7 +11,8 @@ class RunApiController extends Controller
 
     public function __construct()
     {
-        $this->jsonPath = public_path('json/runs.json');
+        $this->jsonPath = storage_path('app/public/json/runs.json');
+
     }
 
     public function index()
