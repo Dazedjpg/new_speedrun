@@ -7,6 +7,7 @@
       "category": "Any%",
       "time": "12m 44s 211ms",
       "status": "Verified",
+      "submitted_at":"-",
       "video_url": "https://youtube.com/example"
     },
     {
@@ -16,6 +17,7 @@
       "category": "Any%",
       "time": "11m 52s 100ms",
       "status": "Verified",
+      "submitted_at":"-",
       "video_url": "https://youtube.com/example2"
     },{
       "run_id":3,
@@ -24,6 +26,7 @@
       "category": "Glitchless",
       "time": "5m 10s 0ms",
       "status":"Verified",
+      "submitted_at":"-",
       "video_url": "https://youtube.com/example3"
     },
     {
@@ -33,6 +36,7 @@
       "category": "Any%",
       "time": "18m 12s 21ms",
       "status":"Verified",
+      "submitted_at":"-",
       "video_url": "https://youtube.com/example4"
     },
     {
@@ -42,6 +46,7 @@
       "category": "Glitchless",
       "time": "4m 12s 21ms",
       "status":"Verified",
+      "submitted_at":"-",
       "video_url": "https://youtube.com/example4"
     }
   ]

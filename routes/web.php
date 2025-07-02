@@ -29,3 +29,14 @@ Route::get('/', function () {
 
 Route::get('/games', [GameWebController::class, 'index'])->name('games.index');
 Route::get('/games/{id}', [GameWebController::class, 'show'])->name('games.show');
+
+use Illuminate\Support\Facades\DB;
+
+Route::get('/test-db', function () {
+    try {
+        DB::connection()->getPdo();
+        return '✅ Connected to DB: ' . DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+        return '❌ Connection failed: ' . $e->getMessage();
+    }
+});

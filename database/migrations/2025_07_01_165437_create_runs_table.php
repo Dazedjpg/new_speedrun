@@ -16,7 +16,6 @@ return new class extends Migration
             $table->id('run_id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('game_id');
-            $table->unsignedBigInteger('category_id');
             $table->integer('time_in_second');
             $table->string('video_url');
             $table->string('status');
