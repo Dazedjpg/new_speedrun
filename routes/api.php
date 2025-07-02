@@ -12,4 +12,3 @@ Route::post('/runs', [RunApiController::class, 'store']);
 Route::get('/runs', [RunApiController::class, 'index']);
 
 Route::get('/runs/{game_id}', [RunApiController::class, 'byGame']);
-

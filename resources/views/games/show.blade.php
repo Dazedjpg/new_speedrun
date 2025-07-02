@@ -91,6 +91,7 @@
                 <th class="py-2 px-4 border border-white">Time</th>
                 <th class="py-2 px-4 border border-white">Status</th>
                 <th class="py-2 px-4 border border-white">Video</th>
+                <th class="py-2 px-4 border border-white">Submitted At</th>
               </tr>
             </thead>
             <tbody class="text-gray-300">
@@ -103,6 +104,7 @@
                   <td class="py-2 px-4 border border-white">
                     <a href="{{ $run['video_url'] }}" target="_blank" class="text-blue-400 hover:underline">Watch</a>
                   </td>
+                  <td class="py-2 px-4 border border-white">{{ $run['submitted_at'] }}</td>
                 </tr>
               @endforeach
             </tbody>

@@ -8,6 +8,18 @@ use Illuminate\Support\Facades\Storage;
 
 class RunController extends Controller
 {
+    public function create()
+    {
+        return view('runs.create');
+    }
+
+
+    public function index()
+    {
+        $runs = Run::all();
+        return response()->json(['data' => $runs]);
+    }
+    
     public function store(Request $request)
     {
         $validated = $request->validate([

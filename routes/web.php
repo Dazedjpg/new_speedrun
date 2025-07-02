@@ -40,3 +40,9 @@ Route::get('/test-db', function () {
         return '❌ Connection failed: ' . $e->getMessage();
     }
 });
+
+
+use App\Http\Controllers\RunController;
+
+Route::get('/runs/create', [RunController::class, 'create']);
+Route::post('/runs', [RunController::class, 'store'])->name('runs.store');
