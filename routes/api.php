@@ -7,3 +7,5 @@ use App\Http\Controllers\Api\RunApiController;
 Route::get('/games', [GameApiController::class, 'index']);
 
 Route::get('/runs/{game_id}', [RunApiController::class, 'byGame']);
+
+Route::get('/games.json', [GameApiController::class, 'serve']);

@@ -38,19 +38,31 @@ class GameWebController extends Controller
         if (!$game) {
             abort(404, 'Game not found');
         }
+        // Add after fetching $game
+        $categories = $data['categories'] ?? [];
+        $versions = collect($data['game_versions'] ?? [])
+                    ->where('game_id', $game['game_id'])
+                    ->values();
 
-        // Filter runs for this game
+
+        // Filter runs untuk game ini
         $runs = collect($runsData['runs'])->where('game_id', (int)$id)->values();
 
+        // Filter versi game untuk game ini
+        $versions = collect($gamesData['game_versions'] ?? [])->where('game_id', (int)$id)->values();
+
         // Styling per game
-        $style = match($game['game_title']) {
-            'Donkey Kong' => ['bg' => 'bg-yellow-800', 'nav' => 'bg-yellow-900'],
-            'Pacman' => ['bg' => 'bg-yellow-700', 'nav' => 'bg-yellow-800'],
-            default => ['bg' => 'bg-gray-900', 'nav' => 'bg-gray-800'],
+        $style = match($game['game_title']){
+        'Donkey Kong' => ['bg' => 'bg-amber-900',  'nav' => 'bg-yellow-950'],
+        'Pacman' => ['bg' => 'bg-yellow-600', 'nav' => 'bg-yellow-700'],
+        'Tetris' => ['bg' => 'bg-blue-900', 'nav' => 'bg-blue-800'],
+        'Mario 64' => ['bg' => 'bg-red-800', 'nav' => 'bg-red-900'],
+        default => ['bg' => 'bg-gray-900', 'nav' => 'bg-gray-800']        
         };
 
-        return view('games.show', compact('game', 'style', 'runs'));
+        return view('games.show', compact('game', 'style', 'categories', 'runs', 'versions'));
     }
+
 
 
 }

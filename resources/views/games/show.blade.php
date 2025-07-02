@@ -25,6 +25,9 @@
     </div>
   </div>
 
+
+
+
   <!-- Runs Section -->
   <div class="max-w-5xl mx-auto p-6">
     <h2 class="text-2xl font-semibold mb-4">Speedrun Submissions</h2>
@@ -46,7 +49,10 @@
     @endphp
 
     <!-- Tabs -->
-    <div class="mb-6 flex flex-wrap gap-2" id="category-tabs">
+    <div class="mb-6 flex flex-col md:flex-row justify-between items-center">
+  
+  <!-- Category Tabs -->
+    <div class="flex flex-wrap gap-2" id="category-tabs">
       @foreach($categories as $index => $cat)
         <button 
           onclick="showCategory('{{ Str::slug($cat) }}')" 
@@ -57,6 +63,17 @@
         </button>
       @endforeach
     </div>
+
+    <!-- Submit Run Button -->
+    <div class="mt-4 md:mt-0">
+      <button 
+        class="bg-maroon hover:bg-red-800 text-white px-5 py-2 rounded text-sm md:text-base"
+      >
+        ➕ Submit Run
+      </button>
+    </div>
+
+  </div>
 
     <!-- Category Tables -->
     @foreach($categories as $index => $cat)
@@ -93,9 +110,30 @@
         @endif
       </div>
     @endforeach
-  </div>
+
+    <!-- Submit Button -->
+    
+
+  </>
 
   <script>
+    const versionSelect = document.getElementById('versionSelect');
+    const vNum = document.getElementById('v-num');
+    const vDesc = document.getElementById('v-desc');
+    const vDate = document.getElementById('v-date');
+
+    function updateVersionInfo() {
+      const selected = versionSelect.options[versionSelect.selectedIndex];
+      vNum.textContent = selected.value;
+      vDesc.textContent = selected.dataset.description;
+      vDate.textContent = selected.dataset.released;
+    }
+
+    if (versionSelect) {
+      versionSelect.addEventListener('change', updateVersionInfo);
+      updateVersionInfo(); // show info on first load
+    }
+
     function showCategory(slug) {
       document.querySelectorAll('.category-table').forEach(el => el.classList.add('hidden'));
       document.querySelectorAll('#category-tabs button').forEach(el => el.classList.remove('bg-gray-500', 'active-tab'));

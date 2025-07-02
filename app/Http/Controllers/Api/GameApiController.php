@@ -17,7 +17,11 @@ class GameApiController extends Controller
         $json = file_get_contents($jsonPath);
         $data = json_decode($json, true);
 
-        return response()->json($data);
-    }
+        return response()->json([
+        ['game_id' => 1001, 'game_title' => 'Pacman'],
+        ['game_id' => 1002, 'game_title' => 'Tetris'],
+        ]);
 
-}
+
+    }
+}   
